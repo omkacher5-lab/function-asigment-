@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <math.h>
+float termDepositAmount(float principal, float rate, int years) {
+    return principal * pow((1 + rate / 100), years);
+}
+
+float recurringDepositAmount(float monthlyDeposit, float rate, int months) {
+    float interest = monthlyDeposit * (months * (months + 1) / 2.0) * (rate / 100.0) * (1.0 / 12.0);
+    return (monthlyDeposit * months) + interest;
+}
+
+int main() {
+    int choice;
+    printf("--- DEPOSIT MATURITY CALCULATOR ---\n");
+    printf("1. Term Deposit\n");
+    printf("2. Recurring Deposit\n");
+    printf("Enter your choice (1-2): ");
+    scanf("%d", &choice);
+    
+    if (choice == 1) {
+        float p, r;
+        int t;
+        printf("Enter Principal amount: ");
+        scanf("%f", &p);
+        printf("Enter Annual Interest Rate (in %%): ");
+        scanf("%f", &r);
+        printf("Enter time period (in years): ");
+        scanf("%d", &t);
+        
+        float maturity = termDepositAmount(p, r, t);
+        printf("Maturity Amount (Term Deposit) = %.2f\n", maturity);
+        
+    } else if (choice == 2) {
+        float p, r;
+        int months;
+        printf("Enter Monthly Deposit amount: ");
+        scanf("%f", &p);
+        printf("Enter Annual Interest Rate (in %%): ");
+        scanf("%f", &r);
+        printf("Enter time period (in months): ");
+        scanf("%d", &months);
+        
+        float maturity = recurringDepositAmount(p, r, months);
+        printf("Maturity Amount (Recurring Deposit) = %.2f\n", maturity);
+        
+    } else {
+        printf("Invalid choice!\n");
+    }
+    
+    return 0;
+}
