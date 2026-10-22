@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void VideoDuration(int totalSeconds) {
+    int hours = totalSeconds / 3600;
+    int minutes = (totalSeconds % 3600) / 60;
+    int seconds = totalSeconds % 60;
+    
+    printf("Duration: %02d hours, %02d minutes, %02d seconds\n", hours, minutes, seconds);
+}
+
+int main() {
+    int totalSeconds;
+    printf("Enter total video duration in seconds: ");
+    scanf("%d", &totalSeconds);
+    
+    VideoDuration(totalSeconds);
+    
+    return 0;
+}
