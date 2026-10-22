@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int isEligible(int age) {
+    if (age >= 18 && age <= 30) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main() {
+    int age;
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    int eligible = isEligible(age);
+
+    if (eligible == 1) {
+        printf("Eligible\n");
+    } else {
+        printf("Not Eligible\n");
+    }
+
+    return 0;
+}
+
+Q 5
