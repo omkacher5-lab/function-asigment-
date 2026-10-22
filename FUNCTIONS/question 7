@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+float calculateBill(int units, float rate, float serviceCharge) {
+    return (units * rate) + serviceCharge;
+}
+
+int main() {
+    int units;
+    float rate, serviceCharge;
+    printf("Enter units consumed: ");
+    scanf("%d", &units);
+
+    printf("Enter rate per unit: ");
+    scanf("%f", &rate);
+
+    printf("Enter fixed service charge: ");
+    scanf("%f", &serviceCharge);
+    float total = calculateBill(units, rate, serviceCharge);
+
+    
+    int rupees = (int)total;
+    int paisa = (int)((total - rupees) * 100 + 0.5); // converts fractional part to paisa
+
+    // Display result
+    printf("\n--- Electricity Bill ---\n");
+    printf("Total Amount : %.2f\n", total);
+    printf("Rupees       : %d\n", rupees);
+    printf("Paisa        : %d\n", paisa);
+
+    return 0;
+}
+Q 7
