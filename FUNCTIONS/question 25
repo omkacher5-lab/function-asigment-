@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h> 
+float hypotenuse(float perpendicular, float base) {
+    return sqrt((perpendicular * perpendicular) + (base * base));
+}
+
+int main() {
+    float perp, base, hyp;
+
+    printf("Enter the perpendicular (height): ");
+    scanf("%f", &perp);
+    
+    printf("Enter the base: ");
+    scanf("%f", &base);
+    hyp = hypotenuse(perp, base);
+    printf("The hypotenuse is = %.2f\n", hyp);
+
+    return 0;
+}
