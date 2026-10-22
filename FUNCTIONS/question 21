@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    
+    return gcd(b, a % b);
+}
+
+int main() {
+    int length1, length2;
+    
+    printf("Enter first ribbon length: ");
+    scanf("%d", &length1);
+    
+    printf("Enter second ribbon length: ");
+    scanf("%d", &length2);
+    
+    int result = gcd(length1, length2);
+    
+    printf("The GCD of the two ribbon lengths is: %d\n", result);
+    
+    return 0;
+}
