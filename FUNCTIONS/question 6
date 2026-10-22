@@ -1,0 +1,35 @@
+#include <stdio.h>
+int reverseHelper(int n, int rev) {
+    if (n == 0) {
+        return rev;
+    }
+   
+    return reverseHelper(n / 10, rev * 10 + (n % 10));
+}
+
+int reverseNumber(int n) {
+    return reverseHelper(n, 0);
+}
+
+int main() {
+    int num, reversedNum;
+
+    printf("Enter a 3 to 5 digit number: ");
+    scanf("%d", &num);
+    reversedNum = reverseNumber(num);
+
+    printf("\n--- Result ---\n");
+    printf("Original number: %d\n", num);
+    printf("Reversed number: %d\n", reversedNum);
+
+    // Verification 
+    if (num == reversedNum) {
+        printf("Verification: The number is a palindrome.\n");
+    } else {
+        printf("Verification: The number has been successfully reversed.\n");
+    }
+
+    return 0;
+}
+
+Q 6
