@@ -2,10 +2,10 @@
 
 
 void swap(int *a, int *b, int *c) {
-    int temp = *a; // temp is an int, not an int*
-    *a = *c;       // c -> a
-    *c = *b;       // b -> c
-    *b = temp;     // a -> b
+    int temp = *a; 
+    *a = *c;      
+    *c = *b;      
+    *b = temp;     
 }
 
 int main() {
@@ -13,14 +13,11 @@ int main() {
 
     printf("enter the value of a: ");
     scanf("%d", &a);
-
     printf("enter the value of b: ");
     scanf("%d", &b);
-
     printf("enter the value of c: ");
     scanf("%d", &c);
     swap(&a, &b, &c);
-
     printf("exchange value are %d, %d, %d\n", a, b, c);
 
     return 0;
