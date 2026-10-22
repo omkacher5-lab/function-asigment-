@@ -1,0 +1,22 @@
+#include <stdio.h>
+void playGame(void) {
+    int score = 0;
+
+    for (int min = 1; min <= 60; min++) {
+        if (min == 15) {
+            break;
+        }
+        if (min % 2 != 0) {
+            continue;
+        }
+        score += 10;
+        printf("Minute %d: Playing! Current score = %d\n", min, score);
+    }
+
+    printf("\nGame Over! Final Score: %d\n", score);
+}
+
+int main() {
+    playGame();
+    return 0;
+}
