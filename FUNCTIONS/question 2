@@ -1,0 +1,33 @@
+#include <stdio.h>
+int scoreCompare(int eshan, int Roshani) {
+    if (eshan > Roshani) 
+        return 1;
+    else if (Roshani > eshan) 
+        return -1;
+    else 
+        return 0;
+}
+
+int main() {
+    int eshan;
+    int Roshani;
+    int result;
+
+    printf("enter eshan score: ");
+    scanf("%d", &eshan);
+
+    printf("enter Roshani's score: ");
+    scanf("%d", &Roshani);
+    result = scoreCompare(eshan, Roshani);
+    if (result == 1) {
+        printf("Eshan scored higher!\n");
+    } else if (result == -1) {
+        printf("Roshani scored higher!\n");
+    } else {
+        printf("It's a tie!\n");
+    }
+
+    return 0;
+}
+
+Q 2
