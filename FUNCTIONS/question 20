@@ -1,0 +1,25 @@
+#include <stdio.h>
+void classifySpeed(int speed) {
+    if (speed < 0) {
+        printf("Invalid speed entered.\n");
+    } else if (speed <= 30) {
+        printf("Speed %d km/h: Slow\n", speed);
+    } else if (speed <= 60) {
+        printf("Speed %d km/h: Normal\n", speed);
+    } else if (speed <= 90) {
+        printf("Speed %d km/h: High\n", speed);
+    } else {
+        printf("Speed %d km/h: Overspeeding!\n", speed);
+    }
+}
+
+int main() {
+    int speed;
+    
+    printf("Enter vehicle speed (in km/h): ");
+    scanf("%d", &speed);
+    
+    classifySpeed(speed);
+    
+    return 0;
+}
