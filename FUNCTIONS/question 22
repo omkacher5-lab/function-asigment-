@@ -1,0 +1,17 @@
+#include <stdio.h>
+  float convter(float amount){
+      int rupee = (int)amount;
+      float  pasa = amount-rupee;
+      printf( " bill amount is %d rupee , %f pasa ",rupee,pasa*100);
+  }
+  
+
+int main(){
+    printf("entre the bill amount: ");
+    float amount;
+    scanf("%F",&amount);
+    convter(amount);
+
+ return 0;
+}
+    
