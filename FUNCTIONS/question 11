@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+float calculateSlabBill(int units) {
+    float bill = 0.0;
+
+    if (units <= 100) {
+        bill = units * 3.0;
+    } else if (units <= 200) {
+        bill = (100 * 3.0) + ((units - 100) * 5.0);
+    } else {
+        bill = (100 * 3.0) + (100 * 5.0) + ((units - 200) * 8.0);
+    }
+    return bill + 75.0;
+}
+
+int main() {
+    int units;
+    printf("Enter units consumed: ");
+    scanf("%d", &units);
+
+    printf("Total Bill: Rs. %.2f\n", calculateSlabBill(units));
+    return 0;
+}
