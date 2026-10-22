@@ -1,0 +1,39 @@
+Q 15
+#include <stdio.h>
+
+void processDeposit(void) {
+    int choice, count;
+    float totalRupees = 0.0;
+
+    do {
+        printf("\n--- Cash Deposit Menu ---\n");
+        printf("1. Rs. 500 note\n");
+        printf("2. Rs. 200 note\n");
+        printf("3. Rs. 100 note\n");
+        printf("4. 50 Paisa coin\n");
+        printf("0. Finish & Deposit\n");
+        printf("Enter choice: ");
+        scanf("%d", &choice);
+
+        if (choice >= 1 && choice <= 4) {
+            printf("Enter quantity: ");
+            scanf("%d", &count);
+        }
+
+        switch (choice) {
+            case 1: totalRupees += count * 500.0; break;
+            case 2: totalRupees += count * 200.0; break;
+            case 3: totalRupees += count * 100.0; break;
+            case 4: totalRupees += count * 0.50;  break; // Converting 50 paisa to Rs 0.50
+            case 0: printf("Processing deposit...\n"); break;
+            default: printf("Invalid choice! Try again.\n");
+        }
+    } while (choice != 0);
+
+    printf("Total Amount Deposited: Rs. %.2f\n", totalRupees);
+}
+
+int main() {
+    processDeposit();
+    return 0;
+}
