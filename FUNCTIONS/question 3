@@ -1,0 +1,33 @@
+#include <stdio.h>
+int sum(int n) {
+    if (n == 0)
+        return 0;
+    return (n % 10) + sum(n / 10);
+}
+int Prime(int sumofdigit) {
+    int count = 0;
+    for (int i = 1; i <= sumofdigit; i++) {
+        if (sumofdigit % i == 0) {
+            count++;
+        }
+    }
+    return count; // Returns the total number of factors
+}
+
+int main() {
+    int n;
+    printf("entre the no: ");
+    scanf("%d", &n);
+    int sumofdigit = sum(n);
+  
+    int factors = Prime(sumofdigit);
+    if (factors == 2) {
+        printf("Prime no\n");
+    } else {
+        printf("Not a Prime no\n");
+    }
+
+    return 0;
+}
+
+Q 3
