@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+void solveQuadratic(float a, float b, float c) {
+    if (a == 0) {
+        printf("Invalid input: 'a' cannot be zero in a quadratic equation.\n");
+        return;
+    }
+
+    float discriminant = (b * b) - (4 * a * c);
+
+    if (discriminant > 0) {
+        float r1 = (-b + sqrt(discriminant)) / (2 * a);
+        float r2 = (-b - sqrt(discriminant)) / (2 * a);
+        printf("Roots are Real and Distinct: %.2f and %.2f\n", r1, r2);
+    } else if (discriminant == 0) {
+        float r = -b / (2 * a);
+        printf("Roots are Real and Equal: %.2f\n", r);
+    } else {
+        float realPart = -b / (2 * a);
+        float imagPart = sqrt(-discriminant) / (2 * a);
+        printf("Roots are Complex: %.2f + %.2fi and %.2f - %.2fi\n", 
+               realPart, imagPart, realPart, imagPart);
+    }
+}
+
+int main() {
+    float a, b, c;
+    printf("Enter coefficients a, b, and c: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    solveQuadratic(a, b, c);
+    return 0;
+}
+
+Q1r
