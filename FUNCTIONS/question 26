@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+void Operation(int a, int b, int choice) {
+    switch (choice) {
+        case 1: // Bitwise AND
+            printf("Result (%d & %d) = %d\n", a, b, a & b);
+            break;
+        case 2: // Bitwise OR
+            printf("Result (%d | %d) = %d\n", a, b, a | b);
+            break;
+        case 3: // Bitwise XOR
+            printf("Result (%d ^ %d) = %d\n", a, b, a ^ b);
+            break;
+        case 4: // Bitwise NOT (uses only the first operand 'a')
+            printf("Result (~%d) = %d\n", a, ~a);
+            break;
+        case 5: // Left Shift (a << b)
+            printf("Result (%d << %d) = %d\n", a, b, a << b);
+            break;
+        case 6: // Right Shift (a >> b)
+            printf("Result (%d >> %d) = %d\n", a, b, a >> b);
+            break;
+        default:
+            printf("Invalid choice!\n");
+    }
+}
+
+int main() {
+    int a, b, choice;
+    printf("--- BITWISE OPERATIONS MENU ---\n");
+    printf("1. Bitwise AND (&)\n");
+    printf("2. Bitwise OR (|)\n");
+    printf("3. Bitwise XOR (^)\n");
+    printf("4. Bitwise NOT \n");
+    printf("5. Left Shift (<<)\n");
+    printf("6. Right Shift (>>)\n");
+    printf("Enter your choice (1-6): ");
+    scanf("%d", &choice);
+
+    if (choice == 4) {
+        printf("Enter the integer: ");
+        scanf("%d", &a);
+        b = 0; // Not used for NOT operation
+    } else {
+        printf("Enter first integer (a): ");
+        scanf("%d", &a);
+        printf("Enter second integer / shift amount (b): ");
+        scanf("%d", &b);
+    }
+
+    Operation(a, b, choice);
+
+    return 0;
+}
