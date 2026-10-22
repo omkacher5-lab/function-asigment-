@@ -1,0 +1,13 @@
+#include <stdio.h>
+float parkingfee(float hr){
+    if (hr > 10) return (hr*100);
+    else return (hr*85);
+    
+}
+int main (){
+    printf("if no of hr>10,fee will be 100 per hr else 85 \n");
+    printf("entre no of hr:  ");
+    float hr;
+    scanf("%f",&hr);
+    float fee = parkingfee(hr);
+    printf("parking fee is %f ",fee);
