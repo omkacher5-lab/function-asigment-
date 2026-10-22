@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+float travelExpense(float distance, float rate, float fixedCharge) {
+    float totalExpense = (distance * rate) + fixedCharge;
+    return totalExpense;
+}
+
+int main() {
+    float distance, rate, fixedCharge;
+
+    printf("Enter distance (in km): ");
+    scanf("%f", &distance);
+
+    printf("Enter rate per km: ");
+    scanf("%f", &rate);
+
+    printf("Enter fixed charge: ");
+    scanf("%f", &fixedCharge);
+
+    float expense = travelExpense(distance, rate, fixedCharge);
+
+    printf("Total bus travel expense is: %.2f\n", expense);
+
+    return 0;
+}
+
