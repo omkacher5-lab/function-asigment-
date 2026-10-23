@@ -1,5 +1,5 @@
 #include <stdio.h>
-void compareTemperatures(float today, float yesterday) {
+void Temperatures(float today, float yesterday) {
     if (today > yesterday) {
         printf("Today is warmer than yesterday (Higher).\n");
     } else if (today < yesterday) {
@@ -17,8 +17,8 @@ int main() {
     printf("Enter yesterday's temperature: ");
     scanf("%f", &yesterday);
     printf("\n--- Temperature Comparison ---\n");
-    compareTemperatures(today, yesterday);
+    Temperatures(today, yesterday);
 
     return 0;
 }
- Q 8
+ 
