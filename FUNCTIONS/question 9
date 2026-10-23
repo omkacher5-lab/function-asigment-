@@ -9,7 +9,7 @@ void playGame(void) {
         if (min % 2 != 0) {
             continue;
         }
-        score += 10;
+        score ++;
         printf("Minute %d: Playing! Current score = %d\n", min, score);
     }
 
