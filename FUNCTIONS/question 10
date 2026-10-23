@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int calculateTotal(int m1, int m2, int m3) {
+int Total(int m1, int m2, int m3) {
     return m1 + m2 + m3;
 }
 
-float calculateAverage(int m1, int m2, int m3) {
-    return (m1 + m2 + m3) / 3.0f;
+float Average(int m1, int m2, int m3) {
+    return (m1 + m2 + m3) / 3.0;
 }
 
 int main() {
@@ -18,14 +18,11 @@ int main() {
 
     printf("Enter marks for subject 3: ");
     scanf("%d", &m3);
-    int total = calculateTotal(m1, m2, m3);
+    int total = Total(m1, m2, m3);
     float average = calculateAverage(m1, m2, m3);
-
-    printf("\n--- Marks Summary ---\n");
     printf("Total Marks   : %d\n", total);
     printf("Average Marks : %.2f\n", average);
 
     return 0;
 }
 
-Q 10
