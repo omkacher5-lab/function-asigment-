@@ -24,7 +24,7 @@ void processDeposit(void) {
             case 1: totalRupees += count * 500.0; break;
             case 2: totalRupees += count * 200.0; break;
             case 3: totalRupees += count * 100.0; break;
-            case 4: totalRupees += count * 0.50;  break; // Converting 50 paisa to Rs 0.50
+            case 4: totalRupees += count * 0.50;  break;
             case 0: printf("Processing deposit...\n"); break;
             default: printf("Invalid choice! Try again.\n");
         }
