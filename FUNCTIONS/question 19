@@ -20,7 +20,7 @@ int main() {
     float fahrenheit = toFahrenheit(celsius);
     float kelvin = toKelvin(celsius);
     
-    // Displaying results formatted to 2 decimal places
+
     printf("Temperature in Fahrenheit: %.2f °F\n", fahrenheit);
     printf("Temperature in Kelvin: %.2f K\n", kelvin);
     
