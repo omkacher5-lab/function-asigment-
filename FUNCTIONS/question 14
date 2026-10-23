@@ -3,7 +3,7 @@
 
 void solveQuadratic(float a, float b, float c) {
     if (a == 0) {
-        printf("Invalid input: 'a' cannot be zero in a quadratic equation.\n");
+        printf("Invalid input: a");
         return;
     }
 
@@ -19,7 +19,7 @@ void solveQuadratic(float a, float b, float c) {
     } else {
         float realPart = -b / (2 * a);
         float imagPart = sqrt(-discriminant) / (2 * a);
-        printf("Roots are Complex: %.2f + %.2fi and %.2f - %.2fi\n", 
+        printf("Roots are Complex: %.f + %.fi and %.f - %.fi\n", 
                realPart, imagPart, realPart, imagPart);
     }
 }
