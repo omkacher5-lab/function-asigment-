@@ -2,22 +2,22 @@
 
 void Operation(int a, int b, int choice) {
     switch (choice) {
-        case 1: // Bitwise AND
+        case 1:
             printf("Result (%d & %d) = %d\n", a, b, a & b);
             break;
-        case 2: // Bitwise OR
+        case 2: 
             printf("Result (%d | %d) = %d\n", a, b, a | b);
             break;
-        case 3: // Bitwise XOR
+        case 3:
             printf("Result (%d ^ %d) = %d\n", a, b, a ^ b);
             break;
-        case 4: // Bitwise NOT (uses only the first operand 'a')
+        case 4: 
             printf("Result (~%d) = %d\n", a, ~a);
             break;
-        case 5: // Left Shift (a << b)
+        case 5: 
             printf("Result (%d << %d) = %d\n", a, b, a << b);
             break;
-        case 6: // Right Shift (a >> b)
+        case 6:
             printf("Result (%d >> %d) = %d\n", a, b, a >> b);
             break;
         default:
@@ -40,7 +40,7 @@ int main() {
     if (choice == 4) {
         printf("Enter the integer: ");
         scanf("%d", &a);
-        b = 0; // Not used for NOT operation
+        b = 0; 
     } else {
         printf("Enter first integer (a): ");
         scanf("%d", &a);
