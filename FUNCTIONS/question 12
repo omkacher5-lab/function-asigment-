@@ -1,13 +1,11 @@
 #include <stdio.h>
 
 void markinwords(int n) {
-    // Edge case for input 0
     if (n == 0) {
         printf("Zero ");
         return;
     }
     
-    // Helper recursive function to process left-to-right
     if (n >= 10) {
         markinwords(n / 10);
     }
