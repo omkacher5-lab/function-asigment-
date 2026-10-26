@@ -2,20 +2,15 @@
 
 int main() {
     int rows = 5;
-
-    // Loop through each row
     for (int i = 1; i <= rows; i++) {
-        // Print leading spaces for right-alignment (2 spaces per shift)
         for (int s = 0; s < (rows - i); s++) {
             printf("  ");
         }
         
-        // Print the descending odd numbers for the current row
         for (int j = 2 * i - 1; j > 0; j -= 2) {
             printf("%d ", j);
         }
         
-        // Move to the next line
         printf("\n");
     }
 
