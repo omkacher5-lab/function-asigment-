@@ -11,7 +11,7 @@ int Prime(int sumofdigit) {
             count++;
         }
     }
-    return count; // Returns the total number of factors
+    return count; 
 }
 
 int main() {
